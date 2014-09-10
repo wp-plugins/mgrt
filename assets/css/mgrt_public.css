@@ -1,0 +1,28 @@
+.mgrt-widget-box {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.mgrt-widget-register input{
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+.mgrt-widget-register input, .mgrt-widget-register button{
+    width: 100%;
+}
+.campaign-item h6, .widget .campaign-item h6{
+    margin-bottom: 0;
+    margin-top: 4px;
+}
+.widget .campaign-item p {
+    margin-bottom: 9px;
+}
+
+.mgrt-widget-box .campaign-item h6 a{
+    padding: 2px;
+    margin-left: 2px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.mgrt-widget-box .campaign-item h6 a:hover{
+    border-radius: 3px;
+}

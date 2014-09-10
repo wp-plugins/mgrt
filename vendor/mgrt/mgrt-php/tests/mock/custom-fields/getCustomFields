@@ -1,0 +1,58 @@
+HTTP/1.1 200 OK
+Date: Fri, 31 Jan 2014 08:04:08 GMT
+Content-Type: application/json
+
+{
+  "custom_fields": {
+    "total": 10,
+    "results": [
+      {
+        "id": 1,
+        "name": "Interest",
+        "field_type": "checkboxes",
+        "choices": [
+          "Sports",
+          "Travels"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Website",
+        "field_type": "website"
+      },
+      {
+        "id": 3,
+        "name": "Name",
+        "field_type": "text"
+      },
+      {
+        "id": 4,
+        "name": "Birthday",
+        "field_type": "date"
+      },
+      {
+        "id": 5,
+        "name": "Age",
+        "field_type": "number"
+      },
+      {
+        "id": 6,
+        "name": "Civility",
+        "field_type": "radio_buttons",
+        "choices": [
+            "Mr",
+            "Ms"
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Sex",
+        "field_type": "drop_down",
+        "choices": [
+            "Men",
+            "Women"
+        ]
+      }
+    ]
+  }
+}

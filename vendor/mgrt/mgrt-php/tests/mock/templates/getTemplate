@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Date: Thu, 30 Jan 2014 18:52:51 GMT
+Content-Type: application/json
+
+{
+  "template": {
+    "id": 1,
+    "name": "Responsive template",
+    "body": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n</body>\r\n</html>",
+    "updated_at": "2013-11-20T17:36:25+0000"
+  }
+}

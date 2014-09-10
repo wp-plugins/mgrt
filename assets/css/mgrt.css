@@ -1,0 +1,285 @@
+/* ------------------------------------------------------------------------------------------------
+// PLUGIN HEADER
+// --------------------------------------------------------------------------------------------- */
+
+.plugin-header {
+    border-radius: 3px;
+    margin-top: 20px;
+}
+.plugin-header-title{
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 28px;
+    font-weight: bold;
+}
+.plugin-header-content {
+    border-radius: 3px;
+    border: solid 3px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+}
+.plugin-header-logo {
+    height: 28px;
+    float: left;
+    margin-right: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------
+// BUTTON
+// --------------------------------------------------------------------------------------------- */
+
+.button.delete {
+    background: #FF4545;
+    border-color: #FF1010;
+    box-shadow: inset 0 1px 0 #FF0000,0 1px 0 rgba(0,0,0,.08);
+}
+.button.delete:hover {
+    background: #FF5050;
+    border-color: #FF1010;
+    box-shadow: inset 0 1px 0 #FF0000,0 1px 0 rgba(0,0,0,.08);
+}
+
+/* ------------------------------------------------------------------------------------------------
+// COUNTER
+// --------------------------------------------------------------------------------------------- */
+.counter {
+    display: inline-block;
+    margin: 8px;
+    padding: 2px;
+            transition: opacity 1s;
+         -o-transition: opacity 1s;
+       -moz-transition: opacity 1s;
+        -ms-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    border-radius: 3px;
+}
+.counter.counter-lg span {
+    font-size: 4em;
+    line-height: 0.7em;
+    display: block;
+    width: 300px;
+}
+.counter.is-disabled {
+    opacity: 0.1;
+}
+/* ------------------------------------------------------------------------------------------------
+// SYNC-WIZARD
+// --------------------------------------------------------------------------------------------- */
+
+.sync-wizard {
+    text-align: center;
+}
+.sync-wizard .sync-wizard-button {
+    line-height: 85px;
+    height: 85px;
+    text-align: center;
+    width: 250px;
+}
+.sync-wizard .sync-wizard-button strong {
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0 5px;
+}
+
+/* ------------------------------------------------------------------------------------------------
+// PROGRESSBAR
+// --------------------------------------------------------------------------------------------- */
+
+.progressbar {
+    height: 20px;
+    border-radius: 3px;
+    margin-top: 10px;
+    border: dotted 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.progressbar .progress {
+    position: relative;
+    left: -20px;
+    top: -50%;
+    bottom: -50%;
+    height: 200%;
+    width: 0px;
+    background: red;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+}
+.progressbar.is-animated .progress{
+width:75px;
+/*animation*/
+-webkit-animation:progressWork linear 2s infinite;
+   -moz-animation:progressWork linear 2s infinite;
+    -ms-animation:progressWork linear 2s infinite;
+     -o-animation:progressWork linear 2s infinite;
+        animation:progressWork linear 2s infinite;
+}
+@keyframes progressWork{
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+@-webkit-keyframes progressWork{
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+@-moz-keyframes progressWork{
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+@-ms-keyframes progressWork{
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+@-o-keyframes progressWork{
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------------
+// ALERT
+// --------------------------------------------------------------------------------------------- */
+
+.alert {
+    padding: 10px;
+    border: solid 1px;
+    margin: 10px 0;
+}
+.alert.alert-warning {
+    border-color: #FF9200;
+    background-color: #FFB149;
+}
+.alert.alert-danger {
+    border-color: #FF0000;
+    background-color: #FF4949;
+}
+.alert .alert-righttext {
+    padding-top: 5px;
+    display: inline-block;
+}
+
+/* ------------------------------------------------------------------------------------------------
+// NOTICE
+// --------------------------------------------------------------------------------------------- */
+
+.notice{
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 5px;
+    background-color: #009adb;
+    border: solid 1px #0083ba;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+.notice .notice-bigbutton {
+    background: #52525a;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+.notice .notice-bigbutton a.button {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px 20px 6px;
+    height: auto;
+}
+.notice .notice-righttext {
+    position: relative;
+    top: 10px;
+    font-size: 1.1em;
+    margin-left: 10px;
+    color: #CAEFFF;
+}
+.notice .notice-righttext strong{
+    color: #fff;
+}
+.notice .notice-logo:after {
+    content: "M";
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 140px;
+    color: #10B7FF;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------
+// LISTS
+// --------------------------------------------------------------------------------------------- */
+
+.checkbox-list label {
+    user-select: none;
+    /*padding: 1px 5px;*/
+}
+.dropdown-list > label {
+    display: block !important;
+    clear: both;
+}
+.dropdown-list > label > span.label {
+    display: inline-block;
+    float: left;
+    vertical-align: text-bottom;
+    line-height: 1.4em;
+    width: 200px;
+}
+.is-last {
+    margin-left: 8px !important;
+}
+select.regular-select {
+    width: 25em;
+}
+
+
+/* ------------------------------------------------------------------------------------------------
+// WIZARD
+// --------------------------------------------------------------------------------------------- */
+
+body#wizard-inner {
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+body#wizard-inner .body-wrapper {
+    padding: 10px;
+    margin-bottom: 60px;
+}
+body#wizard-inner .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f1f1f1;
+}
+body#wizard-inner .footer .footer-wrapper {
+    padding: 0 5px;
+    padding-bottom: 5px;
+}
+
+body#wizard-inner .plugin-header-logo {
+    float: right;
+    padding: 10px;
+    border-radius: 3px;
+}
+

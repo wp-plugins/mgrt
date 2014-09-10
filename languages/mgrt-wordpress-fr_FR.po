@@ -1,0 +1,369 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mgrt-wordpress v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-08-27 14:06+0100\n"
+"Last-Translator: mgrt <contact@mgrt.net>\n"
+"Language-Team: Mgrt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Textdomain-Support: yes\n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 1.6.7\n"
+
+# @ mgrt-wordpress
+msgid "plugin.no.mailhook"
+msgstr "Impossible d'empêcher l'envoi de mail à l'inscription."
+
+# @ mgrt-wordpress
+msgid "plugin.api.key"
+msgstr "Clé API"
+
+# @ mgrt-wordpress
+msgid "plugin.api.secret"
+msgstr "Clé secrète"
+
+# @ mgrt-wordpress
+msgid "plugin.keys.missing"
+msgstr "Le plugin n'est pas totalement configuré"
+
+# @ mgrt-wordpress
+msgid "plugin.menu.start.1p"
+msgstr "Configuration de %s"
+
+# @ mgrt-wordpress
+msgid "plugin.menu.sync"
+msgstr "Synchronisation"
+
+# @ mgrt-wordpress
+msgid "form.profile.section"
+msgstr "Champs supplémentaires"
+
+# @ mgrt-wordpress
+msgid "form.keys.section"
+msgstr "Clés d'accès"
+
+# @ mgrt-wordpress
+msgid "form.keys.validate.error"
+msgstr "Clés invalides"
+
+# @ mgrt-wordpress
+msgid "form.keys.validate.updated"
+msgstr "Clés mises à jour. Redirection en cours..."
+
+# @ mgrt-wordpress
+msgid "form.keys.section.text"
+msgstr ""
+"Entrez ici votre clé API et clé secrète. Vous pouvez en créer une depuis les "
+"paramètres de votre plate-forme, sous 'Clé API'"
+
+# @ mgrt-wordpress
+msgid "plugin.sync.disabled"
+msgstr "Synchronisation désactivée"
+
+# @ mgrt-wordpress
+msgid "btn.back.config"
+msgstr "Retour à la configuration"
+
+# @ mgrt-wordpress
+msgid "sync.force.warning"
+msgstr ""
+"La synchronisation forcée n'est utile que lorsque la base de donnée est "
+"nouvelle"
+
+# @ mgrt-wordpress
+msgid "sync.force.start"
+msgstr "Synchroniser les contacts"
+
+# @ mgrt-wordpress
+msgid "sync.force.failure"
+msgstr "Echec de la synchronisation"
+
+# @ mgrt-wordpress
+msgid "sync.force.step"
+msgstr "Synchronisation..."
+
+# @ mgrt-wordpress
+msgid "sync.force.first"
+msgstr "Première étape"
+
+# @ mgrt-wordpress
+msgid "sync.force.second"
+msgstr "Seconde étape"
+
+# @ mgrt-wordpress
+msgid "sync.force.remains"
+msgstr "Fiches restants"
+
+# @ mgrt-wordpress
+msgid "sync.force.work.line1"
+msgstr ""
+"La synchronisation peut prendre du temps, en fonction du nombre de contacts"
+
+# @ mgrt-wordpress
+msgid "sync.force.work.line2"
+msgstr ""
+"Ne changez pas de paramètres, et ne quittez pas la page durant le chargement"
+
+# @ mgrt-wordpress
+msgid "sync.force.work.done.count"
+msgstr "Fiche traité"
+
+# @ mgrt-wordpress
+msgid "sync.force.work.done.count.m"
+msgstr "Fiches traités"
+
+# @ mgrt-wordpress
+msgid "sync.force.work.done.text"
+msgstr "Synchronisation terminée"
+
+# @ mgrt-wordpress
+msgid "sync.force.leave.warning"
+msgstr ""
+"Vous devez attendre la fin de la synchronisation avant de quitter la page."
+
+# @ mgrt-wordpress
+msgid "notice.install.btn"
+msgstr "Configurer Mgrt"
+
+# @ mgrt-wordpress
+msgid "notice.install.strong"
+msgstr "Presque terminé !"
+
+# @ mgrt-wordpress
+msgid "notice.install.lore"
+msgstr "Entrez vos clés d'accès pour terminer l'installation"
+
+# @ mgrt-wordpress
+msgid "form.sync.section"
+msgstr "Paramètres de synchronisation"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.state"
+msgstr "Synchronisation"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.direction"
+msgstr "Sens de synchronisation"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.lists"
+msgstr "Listes"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.custom"
+msgstr "Champs personnalisés"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.custom.help"
+msgstr "L'adresse email sera toujours synchronisée"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.state.text"
+msgstr "Activer la synchronisation"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.direction.upward.2p"
+msgstr "%s  ==>  %s"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.direction.downward.2p"
+msgstr "%s  <==  %s"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.direction.both.2p"
+msgstr "%s  <=>  %s"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.lists.help"
+msgstr ""
+"Si aucune liste n'est sélectionné, les contacts seront placés dans la "
+"section \"Tous les contacts\""
+
+# @ mgrt-wordpress
+msgid "form.sync.field.custom.ignore"
+msgstr "Ne pas synchroniser"
+
+# @ mgrt-wordpress
+msgid "form.sync.btn.force.disabled"
+msgstr "Synchronisation désactivé"
+
+# @ mgrt-wordpress
+msgid "form.sync.btn.force.enabled"
+msgstr "Forcer la synchronisation"
+
+# @ mgrt-wordpress
+msgid "param.clear.title"
+msgstr "Effacer les paramètres"
+
+# @ mgrt-wordpress
+msgid "param.clear.warning"
+msgstr ""
+"Voulez-vous vraiment effacer les paramètres ? Cela désactivera le plugin"
+
+# @ mgrt-wordpress
+msgid "param.clear.confirm"
+msgstr "Oui, supprimer les paramètres"
+
+# @ mgrt-wordpress
+msgid "param.clear.after"
+msgstr "Les paramètres ont été supprimés"
+
+# @ mgrt-wordpress
+msgid "cache.clear.after.1p"
+msgstr "Le cache à été vidé. Nombre d'entrée supprimés: %s"
+
+# @ mgrt-wordpress
+msgid "btn.reset"
+msgstr "Réinitialiser"
+
+# @ mgrt-wordpress
+msgid "btn.clear.cache"
+msgstr "Vider le cache"
+
+# @ mgrt-wordpress
+msgid "plugin.title.text.1p"
+msgstr "Configuration de %s"
+
+# @ mgrt-wordpress
+msgid "sync.force.priority"
+msgstr "Priorité"
+
+# @ mgrt-wordpress
+msgid "sync.force.priority.website"
+msgstr "Priorité site web"
+
+# @ mgrt-wordpress
+msgid "sync.force.priority.platform"
+msgstr "Priorité plate-forme"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.custom.more"
+msgstr "Champs de profile"
+
+# @ mgrt-wordpress
+msgid "form.sync.field.custom.more.help"
+msgstr "Ces champs apparaitront à la suite du profile"
+
+# @ mgrt-wordpress
+msgid "form.profile.field"
+msgstr "Champs additionnels"
+
+# @ mgrt-wordpress
+msgid "customfield.type.text"
+msgstr "Texte"
+
+# @ mgrt-wordpress
+msgid "customfield.type.number"
+msgstr "Nombre"
+
+# @ mgrt-wordpress
+msgid "customfield.type.radio_buttons"
+msgstr "Boutons radios"
+
+# @ mgrt-wordpress
+msgid "customfield.type.checkboxes"
+msgstr "Cases à cocher"
+
+# @ mgrt-wordpress
+msgid "customfield.type.drop_down"
+msgstr "Liste déroulante"
+
+# @ mgrt-wordpress
+msgid "customfield.type.date"
+msgstr "Date"
+
+# @ mgrt-wordpress
+msgid "customfield.type.website"
+msgstr "Adresse URL"
+
+# @ mgrt-wordpress
+msgid "widget.newsletter.title"
+msgstr "Newsletter"
+
+# @ mgrt-wordpress
+msgid "widget.newsletter.description"
+msgstr "Formulaire d'inscription à la newsletter"
+
+# @ mgrt-wordpress
+msgid "widget.campaign.title"
+msgstr "Dernières campagnes"
+
+# @ mgrt-wordpress
+msgid "widget.campaign.description"
+msgstr "Affiche les dernières campagnes publiques envoyés"
+
+# @ mgrt-wordpress
+msgid "wizard.title"
+msgstr "Assistant shortcodes"
+
+# @ mgrt-wordpress
+msgid "wizard.type"
+msgstr "Type de shortcode"
+
+# @ mgrt-wordpress
+msgid "wizard.type.newsletter"
+msgstr "Newsletter"
+
+# @ mgrt-wordpress
+msgid "wizard.type.campaign"
+msgstr "Campagne"
+
+# @ mgrt-wordpress
+msgid "wizard.text"
+msgstr "Texte affiché"
+
+# @ mgrt-wordpress
+msgid "wizard.text.help"
+msgstr "Entrez ici votre texte"
+
+# @ mgrt-wordpress
+msgid "wizard.newsletter.lists"
+msgstr "Listes de destination"
+
+# @ mgrt-wordpress
+msgid "wizard.newsletter.lists.help"
+msgstr "Séléctionnez la ou les listes de destination"
+
+# @ mgrt-wordpress
+msgid "wizard.campaign.count"
+msgstr "Nombre de campagnes"
+
+# @ mgrt-wordpress
+msgid "wizard.campaign.count.help"
+msgstr "Seule les campagnes publiques seront affichés"
+
+# @ mgrt-wordpress
+msgid "shortcode.newsletter.help"
+msgstr "Inscrivez-vous à la newsletter"
+
+# @ mgrt-wordpress
+msgid "shortcode.newsletter.lists"
+msgstr "Listes de destination"
+
+# @ mgrt-wordpress
+msgid "shortcode.newsletter.email"
+msgstr "Adresse email"
+
+# @ mgrt-wordpress
+msgid "shortcode.newsletter.submit"
+msgstr "S'inscrire"
+
+# @ mgrt-wordpress
+msgid "shortcode.newsletter.registration.success"
+msgstr "Votre adresse mail à bien été inscrite"
+
+# @ mgrt-wordpress
+msgid "shortcode.newsletter.registration.failure"
+msgstr "Erreur, peut-être êtes vous déjà inscrit ?"
+
+# @ mgrt-wordpress
+msgid "webhook.regenerate"
+msgstr "Regénérer le webhook"
+
+# @ mgrt-wordpress
+msgid "webhook.regenerated"
+msgstr "Le webhook à été régénéré"
