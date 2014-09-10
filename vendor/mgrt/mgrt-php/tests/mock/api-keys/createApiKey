@@ -1,0 +1,14 @@
+HTTP/1.1 201 Created
+Date: Fri, 31 Jan 2014 09:33:39 GMT
+Content-Type: application/json
+
+{
+  "api_key": {
+    "enabled": true,
+    "id": 3,
+    "name": "Test",
+    "public_key": "aqwzsxedcrfvtgbyhnujikolpm",
+    "secret_key": "aqwzsxedcrfvtgbyhnujikolpm",
+    "created_at": "2014-01-31T09:33:39+0000"
+  }
+}

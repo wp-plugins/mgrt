@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Thu, 30 Jan 2014 18:52:51 GMT
+Content-Type: application/json
+
+{
+  "webhook_call": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "webhook_id": "00000000-0000-0000-0000-000000000001",
+    "event": "mail.click",
+    "source": "api",
+    "payload": "{\"event\":\"mail.click\",\"payload\":\"Hello World!\"}",
+    "created_at": "2014-08-12T09:12:54+0000",
+    "last_sent_at": "2014-08-12T09:12:54+0000",
+    "attempts": 1,
+    "response_status_code": 200,
+    "request_headers": "...",
+    "request_body": "{\"event\":\"mail.click\",\"payload\":\"Hello World!\"}",
+    "response_headers": "...",
+    "response_body": "..."
+  }
+}

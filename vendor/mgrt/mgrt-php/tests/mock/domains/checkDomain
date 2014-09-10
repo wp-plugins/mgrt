@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Date: Fri, 31 Jan 2014 08:04:08 GMT
+Content-Type: application/json
+
+{
+  "domain": {
+    "dkim_fqdn": "mr._domainkey.mgrt.net",
+    "spf_fqdn": "mgrt.net",
+    "id": 1,
+    "domain_name": "mgrt.net",
+    "public_key": "-----BEGIN PUBLIC KEY-----\nloremispum\n-----END PUBLIC KEY-----\n",
+    "dkim_status": 2,
+    "spf_status": 2,
+    "checked_at": "2014-02-01T18:25:13+0000"
+  }
+}

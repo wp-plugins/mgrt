@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Date: Fri, 31 Jan 2014 08:04:08 GMT
+Content-Type: application/json
+
+{
+  "sender": {
+    "id": 1,
+    "email": "john@doe.com",
+    "email_type": 0,
+    "is_enabled": true,
+    "links": {
+      "self": {
+        "href": "https://api.mgrt.net/senders/1"
+      },
+      "senders": {
+        "href": "https://api.mgrt.net/senders"
+      }
+    }
+  }
+}
