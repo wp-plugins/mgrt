@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Date: Fri, 31 Jan 2014 08:04:08 GMT
+Content-Type: application/json
+
+{
+  "account": {
+    "company": "My company",
+    "address_street": "1 av des Champs Elysées",
+    "address_city": "Paris",
+    "address_zipcode": "750017",
+    "address_country": "FR",
+    "timezone": "Europe/Paris",
+    "currency": "EUR",
+    "plan_type": "prepaid",
+    "credits": 1234567,
+    "header_background_color": "A1A1A1",
+    "header_text_color": "2B2B2B",
+    "logo_url": "http://example.com/my-logo.png",
+    "login_url": "http://example.com/login",
+    "platform_name": "Example Mailing Tool",
+    "links": {
+      "self": {
+        "href": "https://api.mgrt.net/account"
+      },
+      "campaigns": {
+        "href": "https://api.mgrt.net/campaigns"
+      },
+      "contacts": {
+        "href": "https://api.mgrt.net/contacts"
+      },
+      "templates": {
+        "href": "https://api.mgrt.net/templates"
+      },
+      "domains": {
+        "href": "https://api.mgrt.net/domains"
+      },
+      "senders": {
+        "href": "https://api.mgrt.net/senders"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "mgrt/mgrt-php",
+    "type": "library",
+    "description": "A wrapper around mgrt Api.",
+    "keywords": ["api", "mgrt", "email marketing", "email transactional"],
+    "license": "MIT",
+    "autoload": {
+        "psr-0": { "Mgrt": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "guzzle/guzzle": "~3.4",
+        "doctrine/inflector": "1.0",
+        "symfony/yaml": "~2.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

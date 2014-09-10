@@ -1,0 +1,8 @@
+cov
+vendor/
+composer.lock
+composer.phar
+php-cs-fixer.phar
+phpunit.xml
+.DS_Store
+composer.lock

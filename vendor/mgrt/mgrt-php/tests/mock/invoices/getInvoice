@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Fri, 31 Jan 2014 08:04:08 GMT
+Content-Type: application/json
+
+{
+  "invoice": {
+    "number": "MR-201001-00001",
+    "id": 1,
+    "currency": "EUR",
+    "invoice_lines": [
+      {
+        "title": "Purchase credits",
+        "description": "500 credits",
+        "quantity": 500,
+        "price": 0.01
+      }
+    ],
+    "net_amount": 5,
+    "tax_amount": 0.98,
+    "total_amount": 5.98,
+    "due_at": "2010-01-01T23:59:59+0000"
+  }
+}
