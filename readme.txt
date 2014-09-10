@@ -3,6 +3,7 @@ Tags: mgrt,email,campaign,link
 Requires at least: 3.0.1
 Tested up to: 4.0
 Stable tag: trunk
+Contributors: mgrt
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.php
 
