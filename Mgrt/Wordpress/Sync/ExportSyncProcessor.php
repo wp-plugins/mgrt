@@ -243,16 +243,18 @@ class ExportSyncProcessor extends AbstractExecutor
                 ->setValue($fields[$wp_field_name]);
         }
 
-        if (!empty($fields[Profile::getViewKey()])) {
+        $viewKey = $this->getViewManager()->getViewKey('Profile');
+
+        if (!empty($fields[$viewKey])) {
             if (!($additional_fields = $this->getDataManager()->getOption('custom_fields_additional'))) {
                 $additional_fields = array();
             }
 
             foreach ($additional_fields as $fieldId) {
 
-                if (empty($fields[Profile::getViewKey()][Profile::FIELD_KEY.$fieldId])) {
+                if (empty($fields[$viewKey][Profile::FIELD_KEY.$fieldId])) {
                     if ($overwrite) {
-                        $fields[Profile::getViewKey()][Profile::FIELD_KEY.$fieldId] = '';
+                        $fields[$viewKey][Profile::FIELD_KEY.$fieldId] = '';
                     } else {
                         continue;
                     }
@@ -260,7 +262,7 @@ class ExportSyncProcessor extends AbstractExecutor
 
                 $customFields[] = (new CustomField())
                     ->setId(intval($fieldId))
-                    ->setValue($fields[Profile::getViewKey()][Profile::FIELD_KEY.$fieldId]);
+                    ->setValue($fields[$viewKey][Profile::FIELD_KEY.$fieldId]);
             }
         }
 

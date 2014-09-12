@@ -260,9 +260,9 @@ class Start extends AbstractView
                         <?php echo $wp_field_text ?>
                     </span>
                     <select name="<?php echo $this->getViewKey().'[custom_fields]['.$wp_field_name.']' ?>">
-                        <option value="-1"<?php echo -1 == $enabled_custom_fields[$wp_field_name] ? ' selected="selected"' : '' ?>><?php _e('form.sync.field.custom.ignore', 'mgrt-wordpress') ?></option>
+                        <option value="-1"<?php echo (isset($enabled_custom_fields[$wp_field_name]) && (-1 == $enabled_custom_fields[$wp_field_name]) ? ' selected="selected"' : '') ?>><?php _e('form.sync.field.custom.ignore', 'mgrt-wordpress') ?></option>
                     <?php foreach ($this->custom_fields as $custom_field): ?>
-                        <option value="<?php echo $custom_field->getId() ?>"<?php echo $custom_field->getId() == $enabled_custom_fields[$wp_field_name] ? ' selected="selected"' : '' ?>><?php echo $custom_field->getName() ?></option>
+                        <option value="<?php echo $custom_field->getId() ?>"<?php echo (isset($enabled_custom_fields[$wp_field_name]) && ($custom_field->getId() == $enabled_custom_fields[$wp_field_name]) ? ' selected="selected"' : '') ?>><?php echo $custom_field->getName() ?></option>
                     <?php endforeach; ?>
                     </select>
                 </label>

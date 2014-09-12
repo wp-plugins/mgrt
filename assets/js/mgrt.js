@@ -65,8 +65,6 @@ jQuery(function(){
     })
 
     var animations_duration = 1000;
-    var first_state = '';
-    var current_pass;
     var total_users = 0;
     var current_users = 0;
     var times = [];
@@ -96,16 +94,14 @@ jQuery(function(){
                 //window.location.reload();
                 return;
             }
-            console.log(r);
+
             times = times.concat(r.times);
             console.log(moy(times) + 's per contact');
 
-            if (first_state == '') {
-                first_state = r.last_recall.mode;
-                current_pass = r.last_recall.mode;
-            }
-            if (current_pass != r.last_recall.mode && r['continue']) {
-                current_pass = r.last_recall.mode;
+            current_users += r.count;
+            prettyCounter(jQuery('#'+(r.last_recall.sequence == 0 ? 'first' : 'second')+'-pass span'), current_users);
+
+            if (r.next_recall.mode != r.last_recall.mode && r['continue']) {
                 total_users = current_users;
                 current_users = 0;
                 times = [];
@@ -113,9 +109,6 @@ jQuery(function(){
                 jQuery('#sync_counter .counter .progressbar').toggleClass('is-animated');
                 console.log('Next step');
             }
-
-            current_users += r.count;
-            prettyCounter(jQuery('#'+(r.last_recall.sequence == 0 ? 'first' : 'second')+'-pass span'), current_users);
 
             if (r['continue']) {
                 syncStep(cb, r.next_recall);

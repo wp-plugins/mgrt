@@ -121,6 +121,22 @@ class ViewManager
         $this->initView($this->listViews());
     }
 
+    public function getViewKey($view)
+    {
+        $this->initView($view);
+        if (isset($this->loaded[$view])) {
+            return $this->loaded[$view]->getViewKey();
+        }
+    }
+
+    public function getViewName($view)
+    {
+        $this->initView($view);
+        if (isset($this->loaded[$view])) {
+            return $this->loaded[$view]->getViewName();
+        }
+    }
+
     /**
      * Display a specific view/action
      * @param string $view View name

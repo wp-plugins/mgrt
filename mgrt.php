@@ -18,8 +18,7 @@ define('MGRT__MINIMUM_WP_VERSION', '3.1');
 define('MGRT__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('MGRT__PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MGRT__PLUGIN_DIR_REL', dirname(plugin_basename(__FILE__)) . '/');
-define('MGRT__API', 'api.mgrt.net');
-define('MGRT__API_USE_HTTPS', true);
+@define('MGRT__API', 'api.mgrt.net');
 define('MGRT__OPTION_KEY', 'mgrt-settings');
 define('MGRT__WEBHOOK_NAME', 'mgrt_webhook_wordpress');
 

@@ -59,10 +59,16 @@ class ImportSyncProcessor extends AbstractExecutor
      */
     public function onCreate(Contact $contact, $overwrite = true)
     {
-        $u = get_user_by('email', $contact->getEmail());
-        if ($u === false) {
+        $wp_id = get_user_by('email', $contact->getEmail());
+        if ($wp_id === false) {
             $wp_id = wp_create_user($contact->getEmail(), $contact->getEmail());
+            if (!is_int($wp_id)) {
+                return false;
+            }
+        } else {
+            $wp_id = $wp_id->ID;
         }
+
         if ($contact->getEmail() == 'alexandre@yzalis.com') {
             return $wp_id;
         }

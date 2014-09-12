@@ -36,9 +36,7 @@ class DataManager
         $this->MgrtClient = Client::factory(array(
             'public_key'    => $this->getApiKey(),
             'private_key'   => $this->getApiSecret(),
-            'base_url'      => '{scheme}://{hostname}',
-            'hostname'      => MGRT__API,
-            'scheme'        => MGRT__API_USE_HTTPS ? 'https' : 'http'
+            'hostname'      => MGRT__API
         ));
     }
 

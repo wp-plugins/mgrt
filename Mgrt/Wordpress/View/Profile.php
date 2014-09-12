@@ -38,9 +38,19 @@ class Profile extends AbstractView
      */
     const DATE_PATTERN = '/^(\d{4})-(\d{2})-(\d{2})$/';
 
-    public function getFieldKey()
+    public static function getFieldKey()
     {
         return self::FIELD_KEY;
+    }
+
+    public function getViewKey()
+    {
+        return MGRT__OPTION_KEY.'-profile';
+    }
+
+    public function getViewName()
+    {
+        return 'Profile';
     }
 
     /**
@@ -80,16 +90,6 @@ class Profile extends AbstractView
             $this->ready = false;
             return;
         }
-    }
-
-    public function getViewKey()
-    {
-        return MGRT__OPTION_KEY.'-profile';
-    }
-
-    public function getViewName()
-    {
-        return 'Profile';
     }
 
     public static function buildProfileFields($args)
