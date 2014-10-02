@@ -22,4 +22,5 @@ Display your last 5, 10, 15 public campaigns on your website.
 
 
 == Changelog ==
+1.1 Fixed compatibility with PHP 5.3.3
 1.0 First release

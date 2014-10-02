@@ -1,24 +1,24 @@
 [
     {
         "name": "symfony/yaml",
-        "version": "v2.5.4",
-        "version_normalized": "2.5.4.0",
+        "version": "v2.5.5",
+        "version_normalized": "2.5.5.0",
         "target-dir": "Symfony/Component/Yaml",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/Yaml.git",
-            "reference": "01a7695bcfb013d0a15c6757e15aae120342986f"
+            "reference": "b1dbc53593b98c2d694ebf383660ac9134d30b96"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/Yaml/zipball/01a7695bcfb013d0a15c6757e15aae120342986f",
-            "reference": "01a7695bcfb013d0a15c6757e15aae120342986f",
+            "url": "https://api.github.com/repos/symfony/Yaml/zipball/b1dbc53593b98c2d694ebf383660ac9134d30b96",
+            "reference": "b1dbc53593b98c2d694ebf383660ac9134d30b96",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2014-08-31 03:22:04",
+        "time": "2014-09-22 09:14:18",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -116,18 +116,18 @@
     },
     {
         "name": "symfony/event-dispatcher",
-        "version": "v2.5.4",
-        "version_normalized": "2.5.4.0",
+        "version": "v2.5.5",
+        "version_normalized": "2.5.5.0",
         "target-dir": "Symfony/Component/EventDispatcher",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/EventDispatcher.git",
-            "reference": "8faf5cc7e80fde74a650a36e60d32ce3c3e0457b"
+            "reference": "f6281337bf5f985f585d1db6a83adb05ce531f46"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/8faf5cc7e80fde74a650a36e60d32ce3c3e0457b",
-            "reference": "8faf5cc7e80fde74a650a36e60d32ce3c3e0457b",
+            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/f6281337bf5f985f585d1db6a83adb05ce531f46",
+            "reference": "f6281337bf5f985f585d1db6a83adb05ce531f46",
             "shasum": ""
         },
         "require": {
@@ -136,14 +136,14 @@
         "require-dev": {
             "psr/log": "~1.0",
             "symfony/config": "~2.0",
-            "symfony/dependency-injection": "~2.0",
+            "symfony/dependency-injection": "~2.0,<2.6.0",
             "symfony/stopwatch": "~2.2"
         },
         "suggest": {
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
-        "time": "2014-07-28 13:20:46",
+        "time": "2014-09-28 15:56:11",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -269,17 +269,17 @@
     },
     {
         "name": "mgrt/mgrt-php",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/mgrt/mgrt-php.git",
-            "reference": "c945bf684a22dcc0277b671fa83024e82742647b"
+            "reference": "b2e9da3d5e6193d93ceedca2330cc6cf3d592fb5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mgrt/mgrt-php/zipball/c945bf684a22dcc0277b671fa83024e82742647b",
-            "reference": "c945bf684a22dcc0277b671fa83024e82742647b",
+            "url": "https://api.github.com/repos/mgrt/mgrt-php/zipball/b2e9da3d5e6193d93ceedca2330cc6cf3d592fb5",
+            "reference": "b2e9da3d5e6193d93ceedca2330cc6cf3d592fb5",
             "shasum": ""
         },
         "require": {
@@ -288,14 +288,14 @@
             "php": ">=5.3.0",
             "symfony/yaml": "~2.1"
         },
-        "time": "2014-09-09 13:17:18",
+        "time": "2014-10-02 14:33:25",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "1.0-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "Mgrt": "src/"

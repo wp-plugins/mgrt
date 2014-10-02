@@ -53,7 +53,9 @@ class ExportSyncProcessor extends AbstractExecutor
 
         $mailingLists = array();
         foreach ($lists as $listId) {
-            $mailingLists[] = (new MailingList())->setId($listId);
+            $ml = new MailingList();
+            $ml->setId($listId);
+            $mailingLists[] = $ml;
         }
 
         $customFields = array();
@@ -102,7 +104,9 @@ class ExportSyncProcessor extends AbstractExecutor
 
             $mailingLists = array();
             foreach ($clists as $listId) {
-                $mailingLists[] = (new MailingList())->setId($listId);
+                $ml = new MailingList();
+                $ml->setId($listId);
+                $mailingLists[] = $ml;
             }
 
             $contact
@@ -164,7 +168,9 @@ class ExportSyncProcessor extends AbstractExecutor
 
         $mailingLists = array();
         foreach ($lists as $listId) {
-            $mailingLists[] = (new MailingList())->setId($listId);
+            $m = new MailingList();
+            $ml->setId($listId);
+            $mailingLists[] = $ml;
         }
 
         $contact
@@ -237,10 +243,12 @@ class ExportSyncProcessor extends AbstractExecutor
                     continue;
                 }
             }
-
-            $customFields[] = (new CustomField())
+            $cf = new CustomField();
+            $cf
                 ->setId(intval($mgrt_field_id))
                 ->setValue($fields[$wp_field_name]);
+            $customFields[] = $cf;
+
         }
 
         $viewKey = $this->getViewManager()->getViewKey('Profile');
@@ -260,9 +268,11 @@ class ExportSyncProcessor extends AbstractExecutor
                     }
                 }
 
-                $customFields[] = (new CustomField())
+                $cf = new CustomField();
+                $cf
                     ->setId(intval($fieldId))
                     ->setValue($fields[$viewKey][Profile::FIELD_KEY.$fieldId]);
+                $customFields[] = $cf;
             }
         }
 

@@ -288,8 +288,11 @@ class SyncManager
             'listId' => $list_id
         );
         $opts = array();
+
         if ($list_id != -1) {
-            $opts[] = (new MailingList())->setId(intval($list_id));
+            $ml = new MailingList();
+            $ml->setId(intval($list_id));
+            $opts[] = $ml;
         }
         $opts[] = array(
             'page' => intval($page),
@@ -365,9 +368,9 @@ class SyncManager
     {
         $this->import_sync = true;
         if (isset($_GET['webhook']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-            $call = (new WebhookCallInput())
-                ->setSecretKey($this->bootstrap->getDataManager()->getOption('webhook_secret_key', MGRT__OPTION_KEY.'-webhook'))
-                ->fromInputs();
+            $call = new WebhookCallInput();
+            $call->setSecretKey($this->bootstrap->getDataManager()->getOption('webhook_secret_key', MGRT__OPTION_KEY.'-webhook'));
+            $call->fromInputs();
 
             if ($call === false) {
                 exit('error?');

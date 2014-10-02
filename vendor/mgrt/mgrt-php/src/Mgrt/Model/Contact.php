@@ -46,6 +46,29 @@ class Contact extends BaseModel
         return $this->addMailingLists($datas);
     }
 
+    public function removeMailingList(MailingList $mailingList)
+    {
+        return $this->removeMailingLists(array($mailingList));
+    }
+
+    public function removeMailingLists(array $datas)
+    {
+        $filter = array();
+        foreach ($datas as $key => $value) {
+            if ($value instanceof MailingList) {
+                $filter = $value->getId();
+            } else {
+                $filter = is_array($value) ? $value['id'] : $value;
+            }
+
+            if (isset($this->mailing_lists[$filter])) {
+                unset($this->mailing_lists[$filter]);
+            }
+        }
+
+        return $this;
+    }
+
     public function addCustomField(CustomField $customField)
     {
         return $this->addCustomFields(array($customField));
@@ -72,6 +95,29 @@ class Contact extends BaseModel
         $this->custom_fields = array();
         
         return $this->addCustomFields($datas);
+    }
+
+    public function removeCustomField(CustomField $customField)
+    {
+        return $this->removeCustomFields(array($customField));
+    }
+
+    public function removeCustomFields(array $datas)
+    {
+        $filter = array();
+        foreach ($datas as $key => $value) {
+            if ($value instanceof CustomField) {
+                $filter = $value->getId();
+            } else {
+                $filter = is_array($value) ? $value['id'] : $value;
+            }
+
+            if (isset($this->custom_fields[$filter])) {
+                unset($this->custom_fields[$filter]);
+            }
+        }
+
+        return $this;
     }
 
     public function getCustomFieldsToArray()

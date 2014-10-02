@@ -212,7 +212,9 @@ _Getters_
 * ```$contact->getId()``` will return an ```integer```.
 * ```$contact->getEmail()``` will return a ```string```.
 * ```$contact->getMailingLists()``` will return an array of ```MailingList``` objects.
+* ```$contact->getMailingListsToArray()``` will return an array of ```integer```.
 * ```$contact->getCustomFields()``` will return an array of ```CustomField``` objects.
+* ```$contact->getCustomFieldsToArray()``` will return an array of CustomFields, formatted as an array of {id, value}.
 * ```$contact->getLatitude()``` will return a ```string```.
 * ```$contact->getLongitude()``` will return a ```string```.
 * ```$contact->getCountryCode()``` will return a ```string```.
@@ -225,6 +227,17 @@ _Setters_
 * ```$contact->setEmail($email)``` where ```$email``` is a ```string```.
 * ```$contact->setMailingLists($mailingList)``` where ```$mailingList``` is an array of ```MailingList``` objects.
 * ```$contact->setCustomFields($customFields)``` where ```$customFields``` is an array of ```CustomField``` objects.
+
+_Other methods_
+
+* ```$contact->addMailingLists($mailingList)``` where ```$mailingList``` is an array of ```MailingList``` objects.
+* ```$contact->removeMailingLists($mailingList)``` where ```$mailingList``` is an array of ```MailingList``` objects.
+* ```$contact->addMailingList($mailingList)``` where ```$mailingList``` is a ```MailingList``` object.
+* ```$contact->removeMailingList($mailingList)``` where ```$mailingList``` is a ```MailingList``` object.
+* ```$contact->addCustomFields($customFields)``` where ```$customFields``` is an array of ```CustomField``` objects.
+* ```$contact->removeCustomFields($customFields)``` where ```$customFields``` is an array of ```CustomField``` objects.
+* ```$contact->addCustomField($customFields)``` where ```$customFields``` is a ```CustomField``` object.
+* ```$contact->removeCustomField($customFields)``` where ```$customFields``` is a ```CustomField``` object.
 
 
 

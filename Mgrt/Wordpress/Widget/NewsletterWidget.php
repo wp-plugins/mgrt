@@ -53,7 +53,9 @@ class NewsletterWidget extends \WP_Widget
     {
         $mailingLists = array();
         foreach ($targets as $targetId) {
-            $mailingLists[] = (new MailingList())->setId($targetId);
+            $ml = new MailingList();
+            $ml->setId($targetId);
+            $mailingLists[] = $ml;
         }
 
         $result = $this->bootstrap->getSyncManager()->getExportExecutor()->submitEmail($email, $mailingLists);

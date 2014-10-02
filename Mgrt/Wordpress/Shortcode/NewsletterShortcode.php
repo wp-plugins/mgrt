@@ -130,12 +130,18 @@ jQuery(function() {
     {
         $mailingLists = array();
         foreach ($targets as $targetId) {
-            $mailingLists[] = (new MailingList())->setId($targetId);
+            $ml = new MailingList();
+            $ml->setId($targetId);
+            $mailingLists[] = $ml;
         }
 
         $customFields = array();
         foreach ($fields as $fieldId => $fieldValue) {
-            $customFields[] = (new CustomField())->setId($fieldId)->setValue($fieldValue);
+            $cf = new CustomField();
+            $cf
+                ->setId($fieldId)
+                ->setValue($fieldValue);
+            $customFields[] = $cf;
         }
 
         return $this->getSyncManager()->getExportExecutor()->submitEmail($email, $mailingLists, $customFields, true);

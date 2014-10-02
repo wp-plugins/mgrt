@@ -37,7 +37,7 @@ class ViewManager
     public function includeView($views)
     {
         if (is_string($views)) {
-            $views = [$views];
+            $views = array($views);
         }
 
         foreach ($views as $view) {
@@ -87,7 +87,7 @@ class ViewManager
     public function initView($views)
     {
         if (is_string($views)) {
-            $views = [$views];
+            $views = array($views);
         }
 
         foreach ($views as $view) {
@@ -104,9 +104,10 @@ class ViewManager
 
             $object = new $class($this->bootstrap);
 
-            if (!is_subclass_of($object, 'Mgrt\Wordpress\AbstractView', false)) {
-                return;
-            }
+
+            // if (!is_subclass_of($object, 'Mgrt\Wordpress\AbstractView', false)) {
+            //     return;
+            // }
 
             $this->loaded[$view] = $object;
             $this->routes[$object->getViewKey()] = $object->getViewName();
@@ -190,7 +191,7 @@ class ViewManager
             }
         }
 
-        $args = ['page' => $page];
+        $args = array('page' => $page);
 
         if (!empty($action)) {
             $args['action'] = $action;
