@@ -32,6 +32,10 @@ class Start extends AbstractView
         } catch (\Guzzle\Http\Exception\ServerErrorResponseException $e) {
             $this->ready = false;
             return;
+        } catch (\ErrorException $e) {
+            $this->ready = false;
+            $this->getViewManager()->sheduleNotice('no_curl');
+            return false;
         }
 
         add_settings_section(

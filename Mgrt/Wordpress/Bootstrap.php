@@ -158,6 +158,9 @@ class Bootstrap
                 $platformName = $this->dataManager->makeCachedApiCall('getAccount')->getPlatformName();
             } catch (\Guzzle\Http\Exception\ServerErrorResponseException $e) {
                 $platformName = 'Mgrt';
+            } catch (\ErrorException $e) {
+                $this->viewManager->sheduleNotice('no_curl');
+                return;
             }
 
             add_menu_page(sprintf(__('plugin.menu.start.1p', 'mgrt-wordpress'), $platformName), $platformName, 'manage_options', MGRT__OPTION_KEY, array($this, 'display_page'), 'dashicons-email');

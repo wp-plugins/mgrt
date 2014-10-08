@@ -266,7 +266,18 @@ class DataManager
             $param = array($param);
         }
 
-        return call_user_func_array(array($this->MgrtClient, $func), $param);;
+        set_error_handler(function($errno, $errstr, $errfile, $errline, array $errcontext) {
+            // error was suppressed with the @-operator
+            if (0 === error_reporting()) {
+                return false;
+            }
+
+            throw new \ErrorException($errstr, 0, $errno, $errfile, $errline);
+        });
+        $result = call_user_func_array(array($this->MgrtClient, $func), $param);
+        restore_error_handler();
+
+        return $result;
     }
 
     /**

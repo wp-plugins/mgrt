@@ -59,4 +59,16 @@ class Notice extends AbstractView
         </div>
         <?php
     }
+
+    /**
+     * No Curl Extension
+     */
+    public function no_curl()
+    {
+        ?>
+        <div class="alert alert-error">
+            <strong><?php _e('notice.curl.strong', 'mgrt-wordpress') ?></strong> - <?php _e('notice.curl.lore', 'mgrt-wordpress') ?>
+        </div>
+        <?php
+    }
 }

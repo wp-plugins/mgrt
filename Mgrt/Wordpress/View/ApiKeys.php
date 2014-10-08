@@ -76,7 +76,10 @@ class ApiKeys extends AbstractView
             return $options;
         }
 
-        $this->getDataManager()->clear();
+        if (empty($options['mgrt_api_key']) || empty($options['mgrt_api_secret'])) {
+            add_settings_error($this->getViewKey(), 'keys', __('form.keys.validate.error', 'mgrt-wordpress'));
+            return $options;
+        }
 
         if (!$this->checkKeys($options['mgrt_api_key'], $options['mgrt_api_secret'])) {
             add_settings_error($this->getViewKey(), 'keys', __('form.keys.validate.error', 'mgrt-wordpress'));
@@ -85,6 +88,7 @@ class ApiKeys extends AbstractView
             add_settings_error($this->getViewKey(), 'keys', __('form.keys.validate.updated', 'mgrt-wordpress'), 'updated');
             $this->getViewManager()->sheduleNotice('valid_keys');
             $options['valid'] = true;
+            $this->getDataManager()->clear();
         }
 
         return $options;
@@ -139,11 +143,12 @@ class ApiKeys extends AbstractView
                 'public_key'    => $api_key,
                 'private_key'   => $api_secret,
                 'hostname'      => MGRT__API,
-                'scheme'        => MGRT__API_USE_HTTPS ? 'https' : 'http'
             ));
 
             return 'Hello World!' == $client->getHelloWorld();
         } catch (ClientErrorResponseException $e) {
+            return false;
+        } catch (\ErrorException $e) {
             return false;
         }
     }

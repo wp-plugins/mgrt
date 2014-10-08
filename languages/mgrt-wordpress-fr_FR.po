@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: mgrt-wordpress v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-08-27 14:06+0100\n"
+"PO-Revision-Date: 2014-10-08 12:05+0100\n"
 "Last-Translator: mgrt <contact@mgrt.net>\n"
 "Language-Team: Mgrt\n"
 "MIME-Version: 1.0\n"
@@ -367,3 +367,11 @@ msgstr "Regénérer le webhook"
 # @ mgrt-wordpress
 msgid "webhook.regenerated"
 msgstr "Le webhook à été régénéré"
+
+# @ mgrt-wordpress
+msgid "notice.curl.strong"
+msgstr "Erreur critique !"
+
+# @ mgrt-wordpress
+msgid "notice.curl.lore"
+msgstr "CURL n'est pas activé sur votre serveur. Le plugin ne peut pas fonctionner."

@@ -3,7 +3,7 @@
  * Plugin Name: Mgrt for Wordpress
  * Plugin URI: https://wordpress.org/plugins/mgrt/
  * Description: Link your Mgrt account with your Wordpress website.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Mgrt
  * Author URI: https://profiles.wordpress.org/mgrt
  * License: MIT

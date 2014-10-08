@@ -31,7 +31,12 @@ class ForceSync extends AbstractView
                 echo 'Error: '.$e->getMessage();
 
                 return;
+            } catch (\ErrorException $e) {
+                $this->ready = false;
+                $this->getViewManager()->sheduleNotice('no_curl');
+                return false;
             }
+
             $sync_direction = $this->getDataManager()->getOption('sync_direction');
         ?>
         <div class="alert alert-warning"><strong><?php _e('Warning!') ?></strong> <?php _e('sync.force.warning', 'mgrt-wordpress') ?></div>
