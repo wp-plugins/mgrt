@@ -79,6 +79,14 @@
     font-size: 2em;
     padding: 0 5px;
 }
+.sync-error .sync-error-detail {
+    background-color: #F1F1F1;
+    border: dashed 2px #52525A;
+    padding: 5px;
+}
+.sync-error .sync-error-message {
+    font-style: italic;
+}
 
 /* ------------------------------------------------------------------------------------------------
 // PROGRESSBAR

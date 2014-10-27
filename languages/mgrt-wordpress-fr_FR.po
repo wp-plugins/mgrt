@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: mgrt-wordpress v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-10-08 12:05+0100\n"
+"PO-Revision-Date: 2014-10-27 11:41+0100\n"
 "Last-Translator: mgrt <contact@mgrt.net>\n"
 "Language-Team: Mgrt\n"
 "MIME-Version: 1.0\n"
@@ -81,6 +81,10 @@ msgstr "Synchroniser les contacts"
 # @ mgrt-wordpress
 msgid "sync.force.failure"
 msgstr "Echec de la synchronisation"
+
+# @ mgrt-wordpress
+msgid "sync.force.failure.msg"
+msgstr "Une erreur s'est produite lors de la synchronisation."
 
 # @ mgrt-wordpress
 msgid "sync.force.step"
@@ -362,7 +366,7 @@ msgstr "Erreur, peut-être êtes vous déjà inscrit ?"
 
 # @ mgrt-wordpress
 msgid "webhook.regenerate"
-msgstr "Regénérer le webhook"
+msgstr "Actualiser le lien"
 
 # @ mgrt-wordpress
 msgid "webhook.regenerated"
@@ -374,4 +378,5 @@ msgstr "Erreur critique !"
 
 # @ mgrt-wordpress
 msgid "notice.curl.lore"
-msgstr "CURL n'est pas activé sur votre serveur. Le plugin ne peut pas fonctionner."
+msgstr ""
+"CURL n'est pas activé sur votre serveur. Le plugin ne peut pas fonctionner."

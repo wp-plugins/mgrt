@@ -15,12 +15,21 @@ Mgrt for Wordpress allows you to sync your website's database with Mgrt. Just en
 This plugin adds two shortcodes, and two widgets for you.
 
 1. Registration Widget
+
 Insert a simple registration form. The shortcode version allows more customization, as the input of custom fields
 
+
 2. Latests campaign
+
 Display your last 5, 10, 15 public campaigns on your website.
 
 
+
 == Changelog ==
-1.1 Fixed compatibility with PHP 5.3.3
-1.0 First release
+1.1.2   Fixed problems with forced sync
+
+1.1.1   Added alert if CURL is missing
+
+1.1     Fixed compatibility with PHP 5.3.3
+
+1.0     First release

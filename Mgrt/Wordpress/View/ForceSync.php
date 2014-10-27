@@ -85,9 +85,14 @@ class ForceSync extends AbstractView
                 </div>
             </div>
         </div>
+        <div class="sync-error alert alert-danger" style="display: none">
+            <h2 class="text-warning"><?php _e('sync.force.failure', 'mgrt-wordpress') ?></h2>
+            <p class="sync-error-message"><?php _e('sync.force.failure.msg', 'mgrt-wordpress') ?></p>
+            <pre class="sync-error-detail"></pre>
+        </div>
         <script type="text/javascript">
-            var _end_sync_trans = "<?php echo __('sync.force.leave.warning', 'mgrt-wordpress') ?>";
-            var _error_sync_trans = "<?php echo __('sync.force.failure', 'mgrt-wordpress') ?>";
+            var _end_sync_trans = "<?php _e('sync.force.leave.warning', 'mgrt-wordpress') ?>";
+            var _error_sync_trans = "<?php _e('sync.force.failure', 'mgrt-wordpress') ?>";
         </script>
         <?php
         endif;

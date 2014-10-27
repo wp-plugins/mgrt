@@ -218,7 +218,7 @@ class Start extends AbstractView
             <option value="both"<?php echo $selected_direction == 'both' ? ' selected="selected"' : '' ?>><?php echo sprintf(__('form.sync.field.direction.both.2p', 'mgrt-wordpress'), 'Wordpress "'.get_option('blogname').'"', $account->getPlatformName()) ?></option>
         </select>
         <?php if ($selected_direction == 'down' || $selected_direction == 'both'): ?>
-            <a href="<?php echo esc_url( $this->getViewManager()->url('Start', 'regen_webhook') ); ?>" class="button button-secondary"><?php _e('webhook.regenerate') ?></a>
+            <a href="<?php echo esc_url( $this->getViewManager()->url('Start', 'regen_webhook') ); ?>" class="button button-secondary"><?php _e('webhook.regenerate', 'mgrt-wordpress') ?></a>
         <?php endif;
     }
 

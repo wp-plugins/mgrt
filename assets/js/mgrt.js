@@ -68,6 +68,7 @@ jQuery(function(){
     var total_users = 0;
     var current_users = 0;
     var times = [];
+    var last_response = null;
 
     function moy(data) {
         if (data.length == 0) {
@@ -89,11 +90,10 @@ jQuery(function(){
             try{
                 r = JSON.parse(r);
             }catch(e){
-                alert(_error_sync_trans);
-                is_syncing = false;
-                //window.location.reload();
+                logFailure(xhr, String(e));
                 return;
             }
+            last_response = r;
 
             times = times.concat(r.times);
             console.log(moy(times) + 's per contact');
@@ -117,11 +117,39 @@ jQuery(function(){
                     cb(current_users+total_users);
                 }
             }
-        }).fail(function() {
-            alert(_error_sync_trans);
-            is_syncing = false;
-            //window.location.reload();
-        });
+        }).fail(logFailure);
+    }
+
+    function logFailure(e, msg) {
+        alert(_error_sync_trans);
+
+        if (typeof msg == 'undefined') {
+            msg = 'Request failed';
+        }
+
+        if (e == null) {
+            e = {
+                status: 'NaN',
+                responseText: 'Parsing error'
+            }
+        }
+
+        msg += '\n----\n';
+        if (last_response != null) {
+            msg += 'last_recall\n';
+            msg += 'sequence: ' + (typeof last_response.last_recall.sequence == 'undefined' ? 'undefined' : last_response.last_recall.sequence) + '\n';
+            msg += 'mode: ' + (typeof last_response.last_recall.mode == 'undefined' ? 'undefined' : last_response.last_recall.mode) + '\n';
+            msg += 'next_recall\n';
+            msg += 'sequence: ' + (typeof last_response.next_recall.sequence == 'undefined' ? 'undefined' : last_response.next_recall.sequence) + '\n';
+            msg += 'mode: ' + (typeof last_response.next_recall.mode == 'undefined' ? 'undefined' : last_response.next_recall.mode) + '\n';
+        }
+
+        msg += e.status + ' : ' + e.responseText;
+        jQuery('.sync-error .sync-error-detail').text(msg);
+        jQuery('.sync-error').slideDown();
+        jQuery('.sync-wizard').slideUp();
+
+        is_syncing = false;
     }
 
     function prettyCounter($el, to) {

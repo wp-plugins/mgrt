@@ -168,7 +168,7 @@ class ExportSyncProcessor extends AbstractExecutor
 
         $mailingLists = array();
         foreach ($lists as $listId) {
-            $m = new MailingList();
+            $ml = new MailingList();
             $ml->setId($listId);
             $mailingLists[] = $ml;
         }
