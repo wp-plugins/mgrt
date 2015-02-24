@@ -26,6 +26,8 @@ Display your last 5, 10, 15 public campaigns on your website.
 
 
 == Changelog ==
+1.1.3   Fixed webhook url
+
 1.1.2   Fixed problems with forced sync
 
 1.1.1   Added alert if CURL is missing

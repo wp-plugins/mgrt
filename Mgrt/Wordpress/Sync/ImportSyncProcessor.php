@@ -69,9 +69,6 @@ class ImportSyncProcessor extends AbstractExecutor
             $wp_id = $wp_id->ID;
         }
 
-        if ($contact->getEmail() == 'alexandre@yzalis.com') {
-            return $wp_id;
-        }
         if ($wp_id == 0) {
             return false;
         }
@@ -96,8 +93,10 @@ class ImportSyncProcessor extends AbstractExecutor
         $user_meta['basic']['user_email'] = $contact->getEmail();
         $user_meta['basic']['ID'] = $wp_id;
 
-        foreach ($user_meta['custom'] as $meta_key => $meta_value) {
-            $this->getDataManager()->insertOrUpdateCustomField($wp_id, $meta_key, $meta_value);
+        if (!empty($user_meta['custom'])) {
+            foreach ($user_meta['custom'] as $meta_key => $meta_value) {
+                $this->getDataManager()->insertOrUpdateCustomField($wp_id, $meta_key, $meta_value);
+            }
         }
 
         return (bool)wp_update_user($user_meta['basic']);

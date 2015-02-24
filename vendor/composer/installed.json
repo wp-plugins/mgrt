@@ -1,28 +1,28 @@
 [
     {
         "name": "symfony/yaml",
-        "version": "v2.5.6",
-        "version_normalized": "2.5.6.0",
+        "version": "v2.6.4",
+        "version_normalized": "2.6.4.0",
         "target-dir": "Symfony/Component/Yaml",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/Yaml.git",
-            "reference": "2d9f527449cabfa8543dd7fa3a466d6ae83d6726"
+            "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/Yaml/zipball/2d9f527449cabfa8543dd7fa3a466d6ae83d6726",
-            "reference": "2d9f527449cabfa8543dd7fa3a466d6ae83d6726",
+            "url": "https://api.github.com/repos/symfony/Yaml/zipball/60ed7751671113cf1ee7d7778e691642c2e9acd8",
+            "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2014-10-01 05:50:18",
+        "time": "2015-01-25 04:39:26",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.5-dev"
+                "dev-master": "2.6-dev"
             }
         },
         "installation-source": "dist",
@@ -116,18 +116,18 @@
     },
     {
         "name": "symfony/event-dispatcher",
-        "version": "v2.5.6",
-        "version_normalized": "2.5.6.0",
+        "version": "v2.6.4",
+        "version_normalized": "2.6.4.0",
         "target-dir": "Symfony/Component/EventDispatcher",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/EventDispatcher.git",
-            "reference": "804eb28dbbfba9ffdab21fe2066744906cea2212"
+            "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/804eb28dbbfba9ffdab21fe2066744906cea2212",
-            "reference": "804eb28dbbfba9ffdab21fe2066744906cea2212",
+            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/f75989f3ab2743a82fe0b03ded2598a2b1546813",
+            "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813",
             "shasum": ""
         },
         "require": {
@@ -135,19 +135,20 @@
         },
         "require-dev": {
             "psr/log": "~1.0",
-            "symfony/config": "~2.0",
-            "symfony/dependency-injection": "~2.0,<2.6.0",
-            "symfony/stopwatch": "~2.2"
+            "symfony/config": "~2.0,>=2.0.5",
+            "symfony/dependency-injection": "~2.6",
+            "symfony/expression-language": "~2.6",
+            "symfony/stopwatch": "~2.3"
         },
         "suggest": {
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
-        "time": "2014-10-01 15:43:05",
+        "time": "2015-02-01 16:10:57",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.5-dev"
+                "dev-master": "2.6-dev"
             }
         },
         "installation-source": "dist",
@@ -269,17 +270,17 @@
     },
     {
         "name": "mgrt/mgrt-php",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
+        "version": "2.1.1",
+        "version_normalized": "2.1.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/mgrt/mgrt-php.git",
-            "reference": "b2e9da3d5e6193d93ceedca2330cc6cf3d592fb5"
+            "reference": "4cc755e42c854d4342980453e2a3d29117f0b06d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mgrt/mgrt-php/zipball/b2e9da3d5e6193d93ceedca2330cc6cf3d592fb5",
-            "reference": "b2e9da3d5e6193d93ceedca2330cc6cf3d592fb5",
+            "url": "https://api.github.com/repos/mgrt/mgrt-php/zipball/4cc755e42c854d4342980453e2a3d29117f0b06d",
+            "reference": "4cc755e42c854d4342980453e2a3d29117f0b06d",
             "shasum": ""
         },
         "require": {
@@ -288,7 +289,7 @@
             "php": ">=5.3.0",
             "symfony/yaml": "~2.1"
         },
-        "time": "2014-10-02 14:33:25",
+        "time": "2014-11-04 10:25:44",
         "type": "library",
         "extra": {
             "branch-alias": {

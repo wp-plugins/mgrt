@@ -140,7 +140,7 @@ class Start extends AbstractView
     private function makeWebhook()
     {
         $webhooks = $this->getDataManager()->makeApiCall('getWebhooks');
-        $seek_url = site_url() . '/?webhook';
+        $seek_url = get_home_url() . '/?webhook';
         $require_events = $this->getSyncManager()->getListenedEvents();
         $require_sources = $this->getSyncManager()->getListenedSources();
         $found = $need_update = false;

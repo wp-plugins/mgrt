@@ -12,10 +12,12 @@ class WebhookCallInput extends BaseModel
     protected $signature;
     protected $event;
     protected $event_name;
+    protected $event_type;
     protected $source;
     protected $payload;
     protected $valid;
     protected $secret_key;
+    protected $is_test = false;
 
     public function fromInputs($input = null)
     {
@@ -41,7 +43,9 @@ class WebhookCallInput extends BaseModel
         $parsedBody = json_decode($body, true);
         if ($parsedBody['payload'] == 'Hello World!') {
             // this request is a test call; exit now
-            exit();
+            $is_test = true;
+
+            return $this->fromArray(compact('id', 'signature', 'valid', 'is_test'));
         }
 
         if (!is_array($parsedBody['payload'])) {
@@ -53,6 +57,7 @@ class WebhookCallInput extends BaseModel
 
         $exp        = explode('.', $event, 2);
 
+        $event_type = Inflector::camelize($exp[0]);
         $event_name = Inflector::camelize('on_'.$exp[1]);
 
         $objectName = Inflector::classify($exp[0]);
@@ -60,7 +65,7 @@ class WebhookCallInput extends BaseModel
         $result     = new Result();
         $payload    = $result->fromArrayWithObject($parsedBody['payload'], $objectName);
 
-        return $this->fromArray(compact('id', 'signature', 'event', 'event_name', 'source', 'payload', 'valid'));
+        return $this->fromArray(compact('id', 'signature', 'event', 'event_type', 'event_name', 'source', 'payload', 'valid'));
     }
 
     private function validate($payload, $signature)
